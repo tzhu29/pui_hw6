@@ -1,0 +1,465 @@
+/*fonts used in prototype seem to be Sketch specific.
+Selected some acceptable replacement fonts.*/
+
+.login {
+    display: inline-block;
+}
+
+.login a {
+    text-decoration: none;
+    color: black;
+}
+
+.cart-icon {
+    float: right;
+    display: inline-block;
+}
+
+.cart-icon img {
+    width: 42px;
+    height: 27px;
+}
+
+#itemCount {
+  position: absolute;
+  display: none;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  text-align: center;
+}
+
+.cart-header {
+    font-weight: bold;
+}
+
+.qty {
+    display: inline-block;
+    text-align: right;
+}
+
+.cart-price {
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+}
+
+.cart-item {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-image {
+    display: inline-block;
+    width: 15%;
+}
+
+.cart-image img {
+   width: 175px;
+}
+
+.cart-description {
+    display: inline-block;
+    width: 38%;
+}
+
+.cart-description p {
+    padding-left: 50px;
+}
+
+.cart-qty {
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+}
+
+
+
+
+/* TODO: .cart-description
+// and   .cart-picture
+// and then use them in the html where you want more divs.
+// they'll probably need a "text-align: left" to override
+what was done in cart-header/cart-item.*/
+
+h1 {
+    font-family: "Kaushan Script";
+}
+
+.title{
+    display: inline-block;
+}
+
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Hero image code from W3Schools*/
+.hero-image-product-list {
+    background-image: url("hero_image_product_list.jpg");
+        /* Set a specific height */
+    height: 40%;
+
+    /* Position and center the image to scale nicely
+    on all screens from W3Schools*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Position and center the image to scale nicely on
+all screens from W3Schools*/
+.hero-image-home {
+    background-image: url("hero image page 1.svg");
+    height: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.hero-text-home {
+    position: absolute;
+    text-align: right;
+    top: 5%;
+    right: 2%;
+    color: #4C4B4C;
+    text-shadow: 2px 2px white;
+
+}
+
+/* Place product list page hero text in the
+middle of the image */
+.hero-text-list {
+    text-align: right;
+    float: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px #3a3a3a;
+}
+
+.shop-now {
+    color: #4C4B4C;
+    font-family: "Kaushan Script";
+}
+
+.topnav {
+    text-align: center
+}
+/* Navbar container */
+.menu {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+}
+
+/* Links inside the navbar */
+.menu a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu p {
+    float: left;
+    margin: 0;
+    padding: 8px 0 12px 0;
+}
+
+/* Dropdown container code from W3Schools*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button code from W3Schools*/
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 10px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Making the text pink and underlined when you hover*/
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color: #F08C7D;
+  text-decoration: underline;
+}
+
+/* Dropdown content (hidden by default) code from W3Schools*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 42px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown
+links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-module {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    padding: 30px 0 10px 0;
+}
+
+.search-module input {
+    background-color: #E5E5E5;
+    height: 29px;
+    border: none;
+    vertical-align: bottom;
+    margin-right: -1px;
+}
+
+.search-module button {
+    background-color: #E5E5E5;
+    border: none;
+    margin-bottom: 0;
+    padding-top: 3px;
+    margin-left: -3px;
+    margin-right: 5px;
+}
+
+.left-nav {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.gallery {
+    width: 70%;
+    display: inline-block;
+}
+
+.gallery-row {
+    width: 100%
+}
+
+.gallery-column {
+    margin: 5px;
+    width: 45%;
+    border: none;
+    display: inline-block;
+}
+
+.gallery-column img {
+    width: 100%;
+    height: auto;
+}
+
+/*following two accordion related style blocks from W3Schools*/
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3a3a3a;
+    outline: none;
+    transition: 0.4s;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+/* Add a background color to the button
+when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3a3a3a;
+}
+
+/*styling carat downfacing icon*/
+.carat_down{
+    width: 20px;
+    height: 10px;
+    float: right;
+}
+
+/*styling carat sidefacing icon*/
+.carat_icon{
+    width: 10px;
+    height: 20px;
+    float: right;
+}
+
+h2.pillow-styles {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.desc a {
+    text-decoration: none;
+    color: black;
+}
+
+.home-table img {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+.round-pillow {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.round-pillow img {
+    width: 100%;
+}
+
+.price {
+    color: #F76E6E;
+    font-weight: bold;
+}
+
+.product-details {
+    width: 50%;
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.left-aligned {
+    text-align: left;
+}
+
+.quantity {
+    display: inline-block;
+}
+
+.add-to-cart {
+    display: inline-block;
+}
+
+.pink-button {
+    background-color: #F1C8C8;
+    border-radius: 4px;
+    height: 30px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.sign-in input, .checkout-as-guest input {
+    width: 300px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.sign-in {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: 40px 40px 0 0;
+}
+
+.checkout-as-guest {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: 40px;
+}
+
+.to-checkout {
+    display: inline-block;
+    float: right;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
