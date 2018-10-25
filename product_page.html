@@ -4,7 +4,7 @@
 <title>Round Pillow - Fluff Stuff</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="main.js"></script>
+
 </head>
 
 <!--fonts used in prototype seem to be Sketch specific.
@@ -21,7 +21,7 @@ Selected some acceptable replacement fonts. -->
         <a href="#home">Sign-up</a>
     </div>
     <div class="cart-icon">
-      <img src="cart icon.png" alt="cart icon">
+      <img src="cart.png" alt="cart icon">
       <span id="itemCount"></span>
     </div>
 
@@ -78,7 +78,7 @@ Selected some acceptable replacement fonts. -->
 
         <div class="fill-material-dropdown">
             <h3>Fill Material</h3>
-            <select>
+            <select id="fill-picker">
               <option value="duck-down">Duck Down</option>
               <option value="hypoallergenic">Hypoallergenic Poly-blend</option>
               <option value="memory-foam">Memory Foam</option>
@@ -86,7 +86,7 @@ Selected some acceptable replacement fonts. -->
         </div>
         <div class="quantity">
             <h3>Quantity</h3>
-            <select>
+            <select id="qty-picker">
               <option value="one">1</option>
               <option value="two">2</option>
               <option value="three">3</option>
@@ -95,10 +95,12 @@ Selected some acceptable replacement fonts. -->
             </select>
         </div>
 
-        <button class="pink-button add-to-cart" onclick="addItem()"><a style="text-decoration: none; color: black;">Add to Cart</a></button>
+        <button class="pink-button add-to-cart" onclick="addItem('color-picker', 'fill-picker', 'qty-picker')"><a style="text-decoration: none; color: black;">Add to Cart</a></button>
         </div>
     </div>
 </div>
+
+<script src="main.js"></script>
 
 </body>
 </html>

@@ -13,9 +13,33 @@ Then on the cart page, retrieve all items in
 localstorage and display all items
 
 Then sum all the prices, multiplied by quantity
-for cart total */
+for cart total
 
-function addItem() {
-    var cartList = [];
-    cartList.push(options[dropdown.selectedIndex].text);
-}
+var cartList = [];
+function addItem(selectId) {
+    var dropdown = document.getElementById(selectId);
+    var cartItem = {
+    "name": "dfg",
+    "qty": 3,
+    "fill": dropdown.options[dropdown.selectedIndex].text
+};
+
+    */
+
+var cartList = [];
+function addItem(selectId, selectId, selectId) {
+    var dropdown = document.getElementById(selectId);
+    var cartItem = {
+        "color": dropdown.options[dropdown.selectedIndex].text,
+        "fill": dropdown.options[dropdown.selectedIndex].text,
+        "qty": dropdown.options[dropdown.selectedIndex].value
+    };
+    cartList.push(cartItem);
+};
+
+
+/*
+localStorage.setItem('items', JSON.stringify(cartList));
+var checkoutCart = JSON.parse(localStorage.getItem('items'));
+*/
+
