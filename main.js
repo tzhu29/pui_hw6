@@ -28,19 +28,24 @@ function addItem(selectId) {
 
 var cartList = [];
 var cartCount = 0;
-function addItem(selectId, selectId, selectId) {
-    var dropdown = document.getElementById(selectId);
+function addItem(colorSelectId, fillSelectId, qtySelectId) {
+    var dropdownColor = document.getElementById(colorSelectId);
+    var dropdownFill = document.getElementById(fillSelectId);
+    var dropdownQty = document.getElementById(qtySelectId);
     var cartItem = {
-        "color": dropdown.options[dropdown.selectedIndex].value,
-        "fill": dropdown.options[dropdown.selectedIndex].value,
-        "qty": dropdown.options[dropdown.selectedIndex].value
+        "color": dropdownColor.options[dropdownColor.selectedIndex].value,
+        "fill": dropdownFill.options[dropdownFill.selectedIndex].value,
+        "qty": dropdownQty.options[dropdownQty.selectedIndex].text
     };
     cartList.push(cartItem);
 };
 
 
-/*
-localStorage.setItem('items', JSON.stringify(cartList));
-var checkoutCart = JSON.parse(localStorage.getItem('items'));
-*/
+function pushToCart() {
+    localStorage.setItem('items', JSON.stringify(cartList));
+    var checkoutCart = JSON.parse(localStorage.getItem('items'));
+}
+
+
+
 
