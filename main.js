@@ -27,11 +27,12 @@ function addItem(selectId) {
     */
 
 var cartList = [];
+var cartCount = 0;
 function addItem(selectId, selectId, selectId) {
     var dropdown = document.getElementById(selectId);
     var cartItem = {
-        "color": dropdown.options[dropdown.selectedIndex].text,
-        "fill": dropdown.options[dropdown.selectedIndex].text,
+        "color": dropdown.options[dropdown.selectedIndex].value,
+        "fill": dropdown.options[dropdown.selectedIndex].value,
         "qty": dropdown.options[dropdown.selectedIndex].value
     };
     cartList.push(cartItem);

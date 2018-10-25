@@ -20,6 +20,15 @@ Selected some acceptable replacement fonts.*/
     height: 27px;
 }
 
+.cart-count {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: #3a3a3a;
+    text-align: center;
+}
+
 #itemCount {
   position: absolute;
   display: none;
