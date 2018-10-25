@@ -4,6 +4,7 @@
 <title>Shopping Cart - Fluff Stuff</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="main.js"></script>
 </head>
 
 <!--fonts used in prototype seem to be Sketch specific.
@@ -33,47 +34,7 @@ Selected some acceptable replacement fonts. -->
       <div class="cart-price">Price</div>
   </div>
   <hr>
-
-  <div class="cart-item">
-    <div class="cart-image">
-        <img src="red round pillow.jpeg">
-    </div>
-    <div class="cart-description">
-      <p>Round Pillow, School Special (Red)<br>
-      Fill: Duck Down</p>
-    </div>
-    <div class="cart-qty">
-      <select>
-              <option value="one">1</option>
-              <option value="two">2</option>
-              <option value="three">3</option>
-              <option value="four">4</option>
-              <option value="five">5</option>
-            </select>
-    </div>
-    <div class="cart-price">$30</div>
-  </div>
-
-
-  <div class="cart-item">
-    <div class="cart-image">
-        <img src="grey round pillow.jpeg">
-    </div>
-    <div class="cart-description">
-      <p>Round Pillow, Morning Haze (Gray)<br>
-      Fill: Hypo-allergenic</p>
-    </div>
-    <div class="cart-qty">
-      <select>
-              <option value="one">1</option>
-              <option value="two">2</option>
-              <option value="three">3</option>
-              <option value="four">4</option>
-              <option value="five">5</option>
-            </select>
-    </div>
-    <div class="cart-price">$30</div>
-  </div>
+  <div class="cart-item-holder" id="cartItemHolder"></div>
 
     <button class="pink-button to-checkout"><a href=" #" style="text-decoration: none; color: black;">Proceed to Checkout</a></button>
 
