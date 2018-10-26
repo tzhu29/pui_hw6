@@ -35,7 +35,6 @@ function addItem(colorSelectId, fillSelectId, qtySelectId) {
     var dropdownFill = document.getElementById(fillSelectId);
     var dropdownQty = document.getElementById(qtySelectId);
     var cartItem = {
-        "img": dropdownImg.options[dropdownImg.selectedIndex].value,
         "color": dropdownColor.options[dropdownColor.selectedIndex].text,
         "fill": dropdownFill.options[dropdownFill.selectedIndex].value,
         "qty": dropdownQty.options[dropdownQty.selectedIndex].text,
