@@ -481,10 +481,11 @@ div.desc {
 
 .trigger_popup {
     cursor: pointer;
-    font-size: 20px;
     margin: 20px;
     display: inline-block;
+    font-family: "Open Sans";
     font-weight: bold;
+    font-size: 12px;
 }
 /* Popup box END */
 
@@ -513,6 +514,15 @@ div.desc {
     display: inline-block;
     float: right;
     margin-top: 50px;
+}
+
+.subtotal {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+    margin-right: 55px;
+    margin-top: 20px;
 }
 
 

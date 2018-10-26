@@ -88,6 +88,16 @@ function removeFromCart(index) {
     location.reload();
 }
 
+function subTotal() {
+    console.log("subtotal");
+    var currentCart= loadCartFromStorage();
+    var subtotal = 0;
+    for (var i = 0; i < currentCart.length; i++) {
+        subtotal += parseInt(currentCart[i].price);
+    }
+    document.getElementById(subtotal).innerHTML='Subtotal $'+subtotal;
+    }
+
 
 function setupAddedToCartPopup() {
    $(".trigger_popup").click(function(){
