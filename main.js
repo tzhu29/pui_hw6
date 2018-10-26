@@ -1,3 +1,5 @@
+//localStorage.clear();
+
 function changeItem(selectId, imageId) {
      var dropdown = document.getElementById(selectId);
      var image = document.getElementById(imageId);
@@ -27,15 +29,17 @@ function addItem(selectId) {
     */
 
 var cartList = [];
-var cartCount = 0;
-function addItem(colorSelectId, fillSelectId, qtySelectId) {
+
+function addItem(imgSelectId, colorSelectId, fillSelectId, qtySelectId) {
+    var dropdownImg = document.getElementById(imgSelectId);
     var dropdownColor = document.getElementById(colorSelectId);
     var dropdownFill = document.getElementById(fillSelectId);
     var dropdownQty = document.getElementById(qtySelectId);
     var cartItem = {
-        "color": dropdownColor.options[dropdownColor.selectedIndex].value,
+        "img": dropdownImg.options[dropdownImg.selectedIndex].value,
+        "color": dropdownColor.options[dropdownColor.selectedIndex].text,
         "fill": dropdownFill.options[dropdownFill.selectedIndex].value,
-        "qty": dropdownQty.options[dropdownQty.selectedIndex].text
+        "qty": dropdownQty.options[dropdownQty.selectedIndex].text,
     };
     cartList.push(cartItem);
     localStorage.setItem('items', JSON.stringify(cartList));
@@ -65,30 +69,32 @@ function openCart() {
 }
 
 function addItemToCartPage() {
-    var imgName = currentCart[0];
-    var colorName = 'Blue';
-    var fillName = currentCart[1];
-    var qtyNum = currentCart[2];
-    var template =
-    `
-    <div class="cart-item">
-        <div class="cart-image">
-            <img src="${imgName}">
+    for (var i= 0; i < currentCart.length; i++) {
+        var imgName = currentCart[i].img;
+        var colorName = currentCart[i].color;
+        var fillName = currentCart[i].fill;
+        var qtyNum = currentCart[i].qty;
+        var template =
+        `
+        <div class="cart-item">
+            <div class="cart-image">
+                <img src="${imgName}">
+            </div>
+            <div class="cart-description">
+              <p>Round Pillow, ${colorName}<br>
+              Fill: ${fillName}</p>
+            </div>
+            <div class="cart-qty">${qtyNum}</div>
+            <div class="cart-price">$30</div>
         </div>
-        <div class="cart-description">
-          <p>Round Pillow, ${colorName}<br>
-          Fill: ${fillName}</p>
-        </div>
-        <div class="cart-qty">${qtyNum}</div>
-        <div class="cart-price">$30</div>
-    </div>
-    `;
-
-    var holder = document.getElementById('cartItemHolder');
-    if (holder) {
-        var element = document.createElement('div');
-        element.innerHTML = template;
-        holder.appendChild(element);
+        `;
+        console.log(currentCart);
+        var holder = document.getElementById('cartItemHolder');
+        if (holder) {
+            var element = document.createElement('div');
+            element.innerHTML = template;
+            holder.appendChild(element);
+        }
     }
 }
 
