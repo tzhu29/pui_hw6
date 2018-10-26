@@ -11,18 +11,18 @@ function changePrice(qtySelectId) {
 }
 
 
-function addItem(colorSelectId, fillSelectId, qtySelectId, typeId) {
+function addItem(colorSelectId, fillSelectId, qtySelectId, priceId) {
     var cartList = loadCartFromStorage();
     var dropdownColor = document.getElementById(colorSelectId);
     var dropdownFill = document.getElementById(fillSelectId);
     var dropdownQty = document.getElementById(qtySelectId);
-    var typeName = document.getElementById('type');
+    var selectPrice = document.getElementById(priceId);
     var cartItem = {
         "img": dropdownColor.options[dropdownColor.selectedIndex].value,
-        "type": typeName.text,
         "color": dropdownColor.options[dropdownColor.selectedIndex].text,
         "fill": dropdownFill.options[dropdownFill.selectedIndex].value,
         "qty": dropdownQty.options[dropdownQty.selectedIndex].text,
+        "price": selectPrice.text,
     };
     cartList.push(cartItem);
     localStorage.setItem('items', JSON.stringify(cartList));
@@ -58,8 +58,6 @@ function openCart() {
 
 function addItemToCartPage(item, index) {
     console.log("adding item:", item);
-
-    var template =
     `
     <div class="cart-item">
         <div class="cart-image">
@@ -70,7 +68,7 @@ function addItemToCartPage(item, index) {
           Fill: ${item.fill}</p>
         </div>
         <div class="cart-qty">${item.qty}</div>
-        <div class="cart-price">$30</div>
+        <div class="cart-price">${item.qty}*${price}</div>
         <button onclick="removeFromCart(${index})">X</button>
     </div>
     `;
@@ -89,3 +87,21 @@ function removeFromCart(index) {
     localStorage.setItem('items', JSON.stringify(currentCart));
     location.reload();
 }
+
+
+/*$(window).load(function () {
+    $(".trigger_popup").click(function(){
+       $('.hover_bkgr').show();
+    });
+    $('.hover_bkgr').click(function(){
+        $('.hover_bkgr').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr').hide();
+    });
+});*/
+
+
+
+
+
