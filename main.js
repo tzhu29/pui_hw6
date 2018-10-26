@@ -30,8 +30,7 @@ function addItem(selectId) {
 
 var cartList = [];
 
-function addItem(imgSelectId, colorSelectId, fillSelectId, qtySelectId) {
-    var dropdownImg = document.getElementById(imgSelectId);
+function addItem(colorSelectId, fillSelectId, qtySelectId) {
     var dropdownColor = document.getElementById(colorSelectId);
     var dropdownFill = document.getElementById(fillSelectId);
     var dropdownQty = document.getElementById(qtySelectId);
