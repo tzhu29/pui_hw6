@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Round Pillow - Fluff Stuff</title>
+<title>Floor Pillow - Fluff Stuff</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -53,26 +53,26 @@ Selected some acceptable replacement fonts. -->
 
 <div class="centered">
     <div class="round-pillow">
-        <img id="product-img" class="product-img" src="https://s7d2.scene7.com/is/image/BedBathandBeyond/187224765247808p?$478$">
+        <img id="product-img" class="product-img" src="red floor.jpeg">
     </div>
 
     <div class="product-details left-aligned">
 
         <div class="product-title">
-            <h2>The Round Pillow</h2>
-            <p id="price" class="price" data-price="30">$30</p>
+            <h2 id="type">The Floor Pillow</h2>
+            <p id="price" class="price" data-price="40">$40</p>
         </div>
 
             <h3>Product Details:</h3>
-            <p>This round throw pillow will be an amazing accent to any sofa or bed. Made of sheep wool, this pillow is soft and plush.</p>
+            <p>This unique design can help relieve the poor blood circulation and realign hips, while giving your home a bohemian feel.</p>
 
         <h3>Color</h3>
         <div class="color-dropdown">
             <select id="color-picker" onchange="changeItem('color-picker', 'product-img')">
-              <option value="red round pillow.jpeg" selected="selected">School Special (Red)</option>
-              <option value="purple round pillow.jpg">Morning Haze (Purple)</option>
-              <option value="blue round pillow.jpeg">Cozy Denim (Blue)</option>
-              <option value="grey round pillow.jpeg">Rainy Day (Grey)</option>
+              <option value="red floor.jpeg" selected="selected">School Special (Red)</option>
+              <option value="purple floor.jpeg">Morning Haze (Purple)</option>
+              <option value="blue floor.jpeg">Cozy Denim (Blue)</option>
+              <option value="grey floor.jpeg">Rainy Day (Grey)</option>
             </select>
         </div>
 
@@ -95,7 +95,7 @@ Selected some acceptable replacement fonts. -->
             </select>
         </div>
 
-        <button class="pink-button add-to-cart" onclick="addItem('color-picker', 'fill-picker', 'qty-picker'); updateCartCount('cart-count')"><a style="text-decoration: none; color: black;">Add to Cart</a></button>
+        <button class="pink-button add-to-cart" onclick="addItem('color-picker', 'fill-picker', 'qty-picker', 'type'); updateCartCount('cart-count')"><a style="text-decoration: none; color: black;">Add to Cart</a></button>
         </div>
     </div>
 </div>
