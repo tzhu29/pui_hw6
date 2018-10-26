@@ -13,7 +13,7 @@ Selected some acceptable replacement fonts. -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
-<body onload="updateCartCount('cart-count')">
+<body onload="updateCartCount('cart-count'); setupAddedToCartPopup();">
 <!-- Fluff stuff logo, cart icon, etc at the top of the page-->
     <div class="login">
         <img src="person_icon_2.png" alt="person icon" width="20" height="20">
@@ -95,7 +95,7 @@ Selected some acceptable replacement fonts. -->
             </select>
         </div>
 
-        <button class="pink-button add-to-cart trigger_popup" onclick="addItem('color-picker', 'fill-picker', 'qty-picker'); updateCartCount('cart-count')"><a style="text-decoration: none; color: black;">Add to Cart</a></button>
+        <button class="pink-button add-to-cart trigger_popup" onclick="addItem('The Round Pillow', 'color-picker', 'fill-picker', 'qty-picker'); updateCartCount('cart-count')"><a style="text-decoration: none; color: black;">Add to Cart</a></button>
       </div>
 
   <div class="hover_bkgr">

@@ -478,13 +478,14 @@ div.desc {
 .popupCloseButton:hover {
     background-color: #ccc;
 }
-/*.trigger_popup {
+
+.trigger_popup {
     cursor: pointer;
     font-size: 20px;
     margin: 20px;
     display: inline-block;
     font-weight: bold;
-}*.
+}
 /* Popup box END */
 
 .sign-in input, .checkout-as-guest input {
