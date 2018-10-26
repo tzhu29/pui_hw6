@@ -5,8 +5,9 @@ function changeItem(selectId, imageId) {
      image.src = dropdown.options[dropdown.selectedIndex].value;
 }
 
-var cartList = [];
+
 function addItem(colorSelectId, fillSelectId, qtySelectId) {
+    var cartList = loadCartFromStorage();
     var dropdownColor = document.getElementById(colorSelectId);
     var dropdownFill = document.getElementById(fillSelectId);
     var dropdownQty = document.getElementById(qtySelectId);
@@ -22,19 +23,25 @@ function addItem(colorSelectId, fillSelectId, qtySelectId) {
 };
 
 
+function loadCartFromStorage() {
+  var cartStorage = localStorage.getItem('items');
+  console.log("cart storage:", cartStorage);
+  if (cartStorage) {
+    return JSON.parse(cartStorage); // list of objects
+  } else {
+    return [];
+  }
+}
+
 function openCart() {
-    var cartStorage = localStorage.getItem('items');
-    console.log("cart storage [unparsed]:", cartStorage);
-    if (cartStorage) {
-        var currentCart = JSON.parse(cartStorage); //list of arrays in one variable
-        console.log("current cart [parsed]:", currentCart);
-        for (var i= 0; i < currentCart.length; i++) {
-            addItemToCartPage(currentCart[i]);
-        }
+    var currentCart = loadCartFromStorage();
+    console.log("current cart:", currentCart);
+    for (var i= 0; i < currentCart.length; i++) {
+        addItemToCartPage(currentCart[i], i);
     }
 }
 
-function addItemToCartPage(item) {
+function addItemToCartPage(item, index) {
     console.log("adding item:", item);
 
     var template =
@@ -49,7 +56,7 @@ function addItemToCartPage(item) {
         </div>
         <div class="cart-qty">${item.qty}</div>
         <div class="cart-price">$30</div>
-        <button class="delete-item">X</button>
+        <button onclick="removeFromCart(${index})">X</button>
     </div>
     `;
     var holder = document.getElementById('cartItemHolder');
@@ -60,9 +67,10 @@ function addItemToCartPage(item) {
     }
 }
 
-$(document).ready(function(){
-    $(".delete-item").click(function() {
-        $(this).remove();
-    });
-});
-
+function removeFromCart(index) {
+    // loads the cart, updates it, and then reloads the page.
+    var currentCart = loadCartFromStorage();
+    currentCart.splice(index, 1);
+    localStorage.setItem('items', JSON.stringify(currentCart));
+    location.reload();
+}

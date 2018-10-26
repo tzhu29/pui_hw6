@@ -13,7 +13,7 @@ Selected some acceptable replacement fonts. -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
-<body onLoad="openCart()">
+<body>
 <!-- Fluff stuff logo, cart icon, etc at the top of the page-->
     <div class="login">
         <img src="person_icon_2.png" alt="person icon" width="20" height="20">
@@ -69,29 +69,29 @@ Selected some acceptable replacement fonts. -->
         <h3>Color</h3>
         <div class="color-dropdown">
             <select id="color-picker" onchange="changeItem('color-picker', 'product-img')">
-              <option value="red round pillow.jpeg">School Special (Red)</option>
-              <option value="purple round pillow.jpg">Morning Haze (Purple)</option>
-              <option value="blue round pillow.jpeg">Cozy Denim (Blue)</option>
-              <option value="grey round pillow.jpeg">Rainy Day (Grey)</option>
+              <option value="red round pillow.jpeg" select="selected">School Special (Red)</option>
+              <option value="purple round pillow.jpg" select="selected">Morning Haze (Purple)</option>
+              <option value="blue round pillow.jpeg" select="selected">Cozy Denim (Blue)</option>
+              <option value="grey round pillow.jpeg" select="selected">Rainy Day (Grey)</option>
             </select>
         </div>
 
         <div class="fill-material-dropdown">
             <h3>Fill Material</h3>
             <select id="fill-picker">
-              <option value="duck-down">Duck Down</option>
-              <option value="hypoallergenic">Hypoallergenic Poly-blend</option>
-              <option value="memory-foam">Memory Foam</option>
+              <option value="duck-down" select="selected">Duck Down</option>
+              <option value="hypoallergenic" select="selected">Hypoallergenic Poly-blend</option>
+              <option value="memory-foam" select="selected">Memory Foam</option>
             </select>
         </div>
         <div class="quantity">
             <h3>Quantity</h3>
             <select id="qty-picker">
-              <option value="one">1</option>
-              <option value="two">2</option>
-              <option value="three">3</option>
-              <option value="four">4</option>
-              <option value="five">5</option>
+              <option value="one" select="selected">1</option>
+              <option value="two" select="selected">2</option>
+              <option value="three" select="selected">3</option>
+              <option value="four" select="selected">4</option>
+              <option value="five" select="selected">5</option>
             </select>
         </div>
 
