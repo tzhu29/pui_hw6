@@ -11,13 +11,15 @@ function changePrice(qtySelectId) {
 }
 
 
-function addItem(colorSelectId, fillSelectId, qtySelectId) {
+function addItem(colorSelectId, fillSelectId, qtySelectId, typeId) {
     var cartList = loadCartFromStorage();
     var dropdownColor = document.getElementById(colorSelectId);
     var dropdownFill = document.getElementById(fillSelectId);
     var dropdownQty = document.getElementById(qtySelectId);
+    var typeName = document.getElementById('type');
     var cartItem = {
         "img": dropdownColor.options[dropdownColor.selectedIndex].value,
+        "type": typeName.text,
         "color": dropdownColor.options[dropdownColor.selectedIndex].text,
         "fill": dropdownFill.options[dropdownFill.selectedIndex].value,
         "qty": dropdownQty.options[dropdownQty.selectedIndex].text,
@@ -64,7 +66,7 @@ function addItemToCartPage(item, index) {
             <img src="${item.img}">
         </div>
         <div class="cart-description">
-          <p>Round Pillow, ${item.color}<br>
+          <p>${item.type}, ${item.color}<br>
           Fill: ${item.fill}</p>
         </div>
         <div class="cart-qty">${item.qty}</div>

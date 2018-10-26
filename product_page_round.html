@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Round Pillow - Fluff Stuff</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+
+<!--fonts used in prototype seem to be Sketch specific.
+Selected some acceptable replacement fonts. -->
+<link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<body onload="updateCartCount('cart-count')">
+<!-- Fluff stuff logo, cart icon, etc at the top of the page-->
+    <div class="login">
+        <img src="person_icon_2.png" alt="person icon" width="20" height="20">
+        <a href="#home" style="padding-right: 3px">Login</a><a>|</a>
+        <a href="#home">Sign-up</a>
+    </div>
+    <div class="cart-icon">
+      <img src="cart.png" alt="cart icon">
+      <div id="cart-count" class="cart-count" >0</div>
+    </div>
+
+    <div>
+      <div class="title"><h1><a href="index.html">Fluff Stuff</a></h1></div>
+      <div class="search-module">
+        <input type="text">
+        <button type="submit"><img src="search_icon.png"></button>
+      </div>
+    </div>
+
+<!-- Navbar/menu at the top-->
+    <div class="topnav">
+      <div class="menu">
+        <a href="#home">Furniture</a><p>|</p>
+        <div class="dropdown">
+          <a class="dropbtn">Decor</a><p>|</p>
+          <div class="dropdown-content">
+            <a href="#">Vases</a>
+            <a href="#">Planters</a>
+            <a href="product_list.html">Pillows</a>
+            <a href="#">Table Sets</a>
+          </div>
+        </div>
+        <a href="#news">Art</a><p>|</p>
+        <a href="#news">Lighting</a>
+      </div>
+    </div>
+
+<div class="centered">
+    <div class="round-pillow">
+        <img id="product-img" class="product-img" src="https://s7d2.scene7.com/is/image/BedBathandBeyond/187224765247808p?$478$">
+    </div>
+
+    <div class="product-details left-aligned">
+
+        <div class="product-title">
+            <h2>The Round Pillow</h2>
+            <p id="price" class="price" data-price="30">$30</p>
+        </div>
+
+            <h3>Product Details:</h3>
+            <p>This round throw pillow will be an amazing accent to any sofa or bed. Made of sheep wool, this pillow is soft and plush.</p>
+
+        <h3>Color</h3>
+        <div class="color-dropdown">
+            <select id="color-picker" onchange="changeItem('color-picker', 'product-img')">
+              <option value="red round pillow.jpeg" selected="selected">School Special (Red)</option>
+              <option value="purple round pillow.jpg">Morning Haze (Purple)</option>
+              <option value="blue round pillow.jpeg">Cozy Denim (Blue)</option>
+              <option value="grey round pillow.jpeg">Rainy Day (Grey)</option>
+            </select>
+        </div>
+
+        <div class="fill-material-dropdown">
+            <h3>Fill Material</h3>
+            <select id="fill-picker">
+              <option value="duck-down" selected="selected">Duck Down</option>
+              <option value="hypoallergenic">Hypoallergenic Poly-blend</option>
+              <option value="memory-foam">Memory Foam</option>
+            </select>
+        </div>
+        <div class="quantity">
+            <h3>Quantity</h3>
+            <select id="qty-picker" onchange="changePrice('qty-picker')">
+              <option value="one" selected="selected">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5</option>
+            </select>
+        </div>
+
+        <button class="pink-button add-to-cart" onclick="addItem('color-picker', 'fill-picker', 'qty-picker'); updateCartCount('cart-count')"><a style="text-decoration: none; color: black;">Add to Cart</a></button>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
