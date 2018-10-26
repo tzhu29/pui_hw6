@@ -5,10 +5,10 @@ function changeItem(selectId, imageId) {
      image.src = dropdown.options[dropdown.selectedIndex].value;
 }
 
-function changePrice() {
+function changePrice(qtySelectId) {
     var dropdownQty = document.getElementById(qtySelectId);
-    var totalPrice = dropdownQty.options[dropdownQty.selectedIndex].text * price
-    document.getElementById("???").innerHTML="$totalPrice";
+    var totalPrice = dropdownQty.options[dropdownQty.selectedIndex].text * document.querySelector("p.price");
+    document.getElementById(".price").innerHTML="$totalPrice";
 }
 
 

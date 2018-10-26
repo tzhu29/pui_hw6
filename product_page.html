@@ -60,7 +60,7 @@ Selected some acceptable replacement fonts. -->
 
         <div class="product-title">
             <h2>The Round Pillow</h2>
-            <p class="price">$30</p>
+            <p id="price" class="price" price="30">$30</p>
         </div>
 
             <h3>Product Details:</h3>
@@ -86,7 +86,7 @@ Selected some acceptable replacement fonts. -->
         </div>
         <div class="quantity">
             <h3>Quantity</h3>
-            <select id="qty-picker">
+            <select id="qty-picker" onchange="changePrice(qtySelectId)">
               <option value="one" selected="selected">1</option>
               <option value="two">2</option>
               <option value="three">3</option>
