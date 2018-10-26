@@ -32,9 +32,6 @@ function openCart() {
             addItemToCartPage(currentCart[i]);
         }
     }
-    /* for item in currentCart:
-        create new div
-    */
 }
 
 function addItemToCartPage(item) {
@@ -52,6 +49,7 @@ function addItemToCartPage(item) {
         </div>
         <div class="cart-qty">${item.qty}</div>
         <div class="cart-price">$30</div>
+        <button class="delete-item">X</button>
     </div>
     `;
     var holder = document.getElementById('cartItemHolder');
@@ -61,3 +59,10 @@ function addItemToCartPage(item) {
         holder.appendChild(element);
     }
 }
+
+$(document).ready(function(){
+    $(".delete-item").click(function() {
+        $(this).remove();
+    });
+});
+
