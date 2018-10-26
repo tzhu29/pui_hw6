@@ -13,13 +13,14 @@ Selected some acceptable replacement fonts. -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
-<body onLoad="openCart()">
+<body onLoad="openCart(); updateCartCount('cart-count')">
 
   <div class="title"><h1><a href="index.html">Fluff Stuff</a></h1></div>
 
   <div class="cart-icon">
-    <img src="cart icon.png" alt="cart icon">
-  </div>
+   <img src="cart.png" alt="cart icon">
+   <div id="cart-count" class="cart-count" >0</div>
+ </div>
 
   <div>
     <button class="pink-button to-checkout"><a href=" #" style="text-decoration: none; color: black;">Proceed to Checkout</a></button>

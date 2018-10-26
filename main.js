@@ -1,4 +1,3 @@
-
 function changeItem(selectId, imageId) {
      var dropdown = document.getElementById(selectId);
      var image = document.getElementById(imageId);
@@ -28,9 +27,13 @@ function addItem(colorSelectId, fillSelectId, qtySelectId) {
     console.log(localStorage.getItem('items'));
 };
 
-function cartCount(cartcountId) {
-    var numOfItems = JSON.parse(cartStorage).length;
-    document.getElementById("cart-count").innerHTML=numOfItems;
+function updateCartCount(cartCountId) {
+    var currentCart= loadCartFromStorage();
+    var count = 0;
+    for (var i = 0; i < currentCart.length; i++) {
+        count += parseInt(currentCart[i].qty);
+    }
+    document.getElementById(cartCountId).innerHTML=count;
 }
 
 function loadCartFromStorage() {
