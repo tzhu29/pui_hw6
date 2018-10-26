@@ -7,7 +7,7 @@ function changeItem(selectId, imageId) {
 
 function changePrice(qtySelectId) {
     var dropdownQty = document.getElementById(qtySelectId);
-    var totalPrice = dropdownQty.options[dropdownQty.selectedIndex].text * document.querySelector("p.price");
+    var totalPrice = dropdownQty.options[dropdownQty.selectedIndex].text * document.getElementById(".price").getAttribute("data-price");
     document.getElementById(".price").innerHTML="$totalPrice";
 }
 
