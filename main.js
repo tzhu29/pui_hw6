@@ -58,6 +58,7 @@ function openCart() {
     for (var i= 0; i < currentCart.length; i++) {
         addItemToCartPage(currentCart[i], i);
     }
+    subTotal();
 }
 
 //injects html as a div
