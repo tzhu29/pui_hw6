@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pillows - Fluff Stuff</title>
+<title>Round Pillow - Fluff Stuff</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 </head>
+
+<!--fonts used in prototype seem to be Sketch specific.
+Selected some acceptable replacement fonts. -->
 <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
-<body>
-
+<body onload="updateCartCount('cart-count'); setupAddedToCartPopup();">
+<!-- Fluff stuff logo, cart icon, etc at the top of the page-->
     <div class="login">
         <img src="person_icon_2.png" alt="person icon" width="20" height="20">
         <a href="#home" style="padding-right: 3px">Login</a><a>|</a>
         <a href="#home">Sign-up</a>
     </div>
+
     <div class="cart-icon">
-      <img src="cart icon.png" alt="cart icon">
+        <a href="cart.html"><img src="cart.png" alt="cart icon"></a>
+        <div id="cart-count" class="cart-count" >0</div>
     </div>
 
     <div>
@@ -26,6 +33,7 @@
         <button type="submit"><img src="search_icon.png"></button>
       </div>
     </div>
+
 
 
     <div class="topnav">
