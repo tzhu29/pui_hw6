@@ -1,16 +1,18 @@
+//for changing image on product details page
 function changeItem(selectId, imageId) {
      var dropdown = document.getElementById(selectId);
      var image = document.getElementById(imageId);
      image.src = dropdown.options[dropdown.selectedIndex].value;
 }
 
+//for changing price on product details page
 function changePrice(qtySelectId) {
     var dropdownQty = document.getElementById(qtySelectId);
     var totalPrice = dropdownQty.options[dropdownQty.selectedIndex].text * document.getElementById("price").getAttribute("data-price");
     document.getElementById("price").innerHTML="$"+totalPrice;
 }
 
-
+//organizing data to store and get in localStorage
 function addItem(type, colorSelectId, fillSelectId, qtySelectId, priceId) {
     var cartList = loadCartFromStorage();
     var dropdownColor = document.getElementById(colorSelectId);
@@ -38,6 +40,7 @@ function updateCartCount(cartCountId) {
     document.getElementById(cartCountId).innerHTML=count;
 }
 
+//pulls cart objects out to render on cart page
 function loadCartFromStorage() {
   var cartStorage = localStorage.getItem('items');
   console.log("cart storage:", cartStorage);
@@ -48,6 +51,7 @@ function loadCartFromStorage() {
   }
 }
 
+//renders cart page with all the items
 function openCart() {
     var currentCart = loadCartFromStorage();
     console.log("current cart:", currentCart);
@@ -56,6 +60,7 @@ function openCart() {
     }
 }
 
+//injects html as a div
 function addItemToCartPage(item, index) {
     console.log("adding item:", item);
     var template = `
@@ -80,6 +85,7 @@ function addItemToCartPage(item, index) {
     }
 }
 
+//delete function
 function removeFromCart(index) {
     // loads the cart, updates it, and then reloads the page.
     var currentCart = loadCartFromStorage();
@@ -88,6 +94,7 @@ function removeFromCart(index) {
     location.reload();
 }
 
+//creates the subtotal
 function subTotal() {
     console.log("subtotal");
     var currentCart= loadCartFromStorage();
@@ -95,7 +102,7 @@ function subTotal() {
     for (var i = 0; i < currentCart.length; i++) {
         subtotal += parseInt(currentCart[i].price);
     }
-    document.getElementById(subtotal).innerHTML='Subtotal $'+subtotal;
+    document.getElementById("subtotal").innerHTML='Subtotal $'+subtotal;
     }
 
 
