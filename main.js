@@ -51,14 +51,16 @@ function loadCartFromStorage() {
   }
 }
 
-//renders cart page with all the items
+//renders cart page with all the items and gives subtotal
 function openCart() {
-    var currentCart = loadCartFromStorage();
-    console.log("current cart:", currentCart);
-    for (var i= 0; i < currentCart.length; i++) {
-        addItemToCartPage(currentCart[i], i);
-    }
-    subTotal();
+   var currentCart = loadCartFromStorage();
+   console.log("current cart:", currentCart);
+   var subtotal = 0;
+   for (var i = 0; i < currentCart.length; i++) {
+       addItemToCartPage(currentCart[i], i);
+       subtotal += parseInt(currentCart[i].price.replace("$", ""));
+   }
+   document.getElementById("subtotal").innerHTML='Subtotal $'+subtotal;
 }
 
 //injects html as a div
@@ -94,17 +96,6 @@ function removeFromCart(index) {
     localStorage.setItem('items', JSON.stringify(currentCart));
     location.reload();
 }
-
-//creates the subtotal
-function subTotal() {
-    console.log("subtotal");
-    var currentCart= loadCartFromStorage();
-    var subtotal = 0;
-    for (var i = 0; i < currentCart.length; i++) {
-        subtotal += parseInt(currentCart[i].price);
-    }
-    document.getElementById("subtotal").innerHTML='Subtotal $'+subtotal;
-    }
 
 
 function setupAddedToCartPopup() {

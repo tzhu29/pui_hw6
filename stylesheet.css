@@ -525,7 +525,7 @@ div.desc {
     margin-top: 50px;
 }
 
-.subtotal {
+#subtotal {
     font-family: "Open Sans";
     font-weight: bold;
     font-size: 16px;
