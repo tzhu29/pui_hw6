@@ -51,11 +51,6 @@ Selected some acceptable replacement fonts.*/
     font-weight: bold;
 }
 
-.qty {
-    display: inline-block;
-    text-align: right;
-}
-
 .cart-price {
     display: inline-block;
     text-align: right;
@@ -89,7 +84,7 @@ Selected some acceptable replacement fonts.*/
 .cart-qty {
     display: inline-block;
     text-align: right;
-    width: 20%;
+    width: 15%;
 }
 
 
@@ -520,7 +515,6 @@ div.desc {
 }
 
 .to-checkout {
-    display: inline-block;
     float: right;
     margin-top: 50px;
 }
@@ -530,7 +524,7 @@ div.desc {
     font-weight: bold;
     font-size: 16px;
     float: right;
-    margin-right: 55px;
+    margin-right: 152px;
     margin-top: 20px;
 }
 
