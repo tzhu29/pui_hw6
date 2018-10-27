@@ -97,7 +97,7 @@ function removeFromCart(index) {
     location.reload();
 }
 
-
+//pop-up code from here: https://html-online.com/articles/simple-popup-box/
 function setupAddedToCartPopup() {
    $(".trigger_popup").click(function(){
       $('.hover_bkgr').show();
